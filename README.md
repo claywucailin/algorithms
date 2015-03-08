@@ -31,7 +31,7 @@ right(i)
 
 堆排序分为两步:建堆和取最大值。首先把待排序的序列建堆(大堆),然后取最大值A[1],把其与堆中最后一个元素交换,把堆的长度减1,这时破坏了堆,于是重新建堆,如此循环直至堆大小为1,此时数组A就排好了序。下面是堆排序代码和演示图(图源来自wiki):
 
-![堆排序演示图](http://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)
+![alt text](http://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif "堆排序演示图")
 
 ```
 //时间复杂度为T(n) = n * T(maxHeapify) = n * log(n)
