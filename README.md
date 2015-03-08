@@ -2,11 +2,11 @@
 
 * 基本排序
   * [heap sort 堆排序](#heap_sort) 
-  * [qucik sort 快速排序](#heap_sort) 
-  * [insert sort 插入排序](#heap_sort) 
-  * [merge sort 合并排序](#heap_sort) 
-  * [radix sort 基数排序](#heap_sort) 
-  * [count sort 计数排序](#heap_sort) 
+  * [qucik sort 快速排序](#qucik_sort) 
+  * [insert sort 插入排序](#insert_sort) 
+  * [merge sort 合并排序](#merge_sort) 
+  * [radix sort 基数排序](#radix_sort) 
+  * [count sort 计数排序](#count_sort) 
 
 
 ## <a name="heap_sort">堆排序</a> [&#8593;](#heap_sort)
@@ -95,3 +95,8 @@ void buildMaxHeap(int a[],int length)
 **时间复杂度:**从上面分析可知T(buildHeapSort(n)) = n * T(maxHeapify) = n * log(n)。
 
 **应用:**堆排序可应用于优先级队列,在linux中其进程调度使用的调度数据结构是位图bit array,查找的时间复杂度为O(1)。
+
+## <a name="qucik_sort">堆排序</a> [&#8593;](#qucik_sort)
+## <a name="insert_sort">堆排序</a> [&#8593;](#insert_sort)
+## <a name="merge_sort">堆排序</a> [&#8593;](#merge_sort)
+## <a name="radix_sort">堆排序</a> [&#8593;](#radix_sort)
