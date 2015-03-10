@@ -125,15 +125,37 @@ void buildMaxHeap(int a[],int length)
 
 ## <a name="qucik_sort">快速排序</a> [&#8593;](#qucik_sort)
 
+**描述:**quick sort快速排序和合并排序一样,采用分而治之的方法。对数组A[p,r]进行排序通常分为三部分:
+
+-  divide:函数partition(A[p,r])把A[p,r]拆分为两部分A[p,x-1]和A[x+1,r],其中满足A[p,x-1]的所有数据小于A[x],A[x+1,r]的所有数据大于A[x]
+-  conquer:递归调用quick sort方法处理A[p,x-1]和A[x+1,r]
+-  combine:由于每次的各个子数组A[p,x-1]和A[x+1,r]都是有序的,因为A[p,x-1] < A[x+1,r],所以当递归处理完后已经是有序队列le,所以不用再处理合并操作
+
 ```
-void quick_sort(int a[],int length)
+int partition(int a[],int p,int r)
 {
-  int less_index = -1;
-  int large_index = 0;
-  int i;
-  for(i = length - 1; i >= 0; i--)
+  int i = p - 1,j;
+  int x = a[r];
+
+  for(j = p; j < r; j++)
   {
-    
+    if(a[j] < x)
+    {
+      i++;
+      exchange(a[i],a[j]);
+    }
+  }
+  exchange(a[i+1],a[r])
+  return (i + 1)
+}
+
+void quick_sort(int a[],int p,int r)
+{
+  if(p < r)
+  {
+    int x = partition(a,p,r);
+    quick_sort(a,p,x-1);
+    quick_sort(a,x+1,r);
   }
 }
 ```
