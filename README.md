@@ -167,10 +167,11 @@ void quick_sort(int a[],int p,int r)
 ```
 
 ![快排演示图](http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/200px-Partition_example.svg.png)
+
 **算法时间复杂度:**
-- 最优复杂度为n*logn
-- 最差复杂度和插入排序一样为n*n
-- 平均复杂度为n*logn
+- 最优复杂度:n*logn
+- 最差复杂度:当序列是有序的时,和插入排序一样为n*n
+- 平均复杂度:n*logn
 
 ## <a name="insert_sort">插入排序</a> [&#8593;](#insert_sort)
 ## <a name="merge_sort">合并排序</a> [&#8593;](#merge_sort)
