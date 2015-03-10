@@ -124,6 +124,19 @@ void buildMaxHeap(int a[],int length)
 **应用:**堆排序可应用于优先级队列,在linux中其进程调度使用的调度数据结构是位图bit array,查找的时间复杂度为O(1)。
 
 ## <a name="qucik_sort">快速排序</a> [&#8593;](#qucik_sort)
+
+```
+void quick_sort(int a[],int length)
+{
+  int less_index = -1;
+  int large_index = 0;
+  int i;
+  for(i = length - 1; i >= 0; i--)
+  {
+    
+  }
+}
+```
 ## <a name="insert_sort">插入排序</a> [&#8593;](#insert_sort)
 ## <a name="merge_sort">合并排序</a> [&#8593;](#merge_sort)
 ## <a name="radix_sort">基数排序</a> [&#8593;](#radix_sort)
