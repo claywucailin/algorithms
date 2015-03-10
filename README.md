@@ -79,7 +79,34 @@ void maxHeapify(int a[],int index,int length)
       maxHeapify(a,l,length);
     }
 }
-
+//用val更新替换index处的元素
+void updateIndexValues(int a[],int index,int val,int heap_size)
+{
+  if(a[index] > val)//如果插入的元素小于原index处的元素,则调用maxHeapify找插入位置
+  {
+    a[index] = val;//替换后可能破坏堆的熟悉,调用maxHeapify重新堆化
+    maxHeapify(a,index,heap_size);
+  }
+  else
+  {
+    a[index] = val;
+    parent = index/2;
+    while(parent > 1 && a[parent] < val)//如果val大于parent处的节点,则向上查找合适的节点,类是于插入排序
+    {
+      a[index] = a[parent];
+      index = parent;
+      parent = index/2;
+    }
+    a[index] = val;
+  }
+}
+//删除index处的元素
+void delete_heap(int a[],int index,int *heap_size)
+{
+  int val = a[*heap_size];//删除堆元素的操作是把要删除的元素替换为堆最后的一个元素,同时堆的大小heap_size-1
+  *heap_size--;
+  updateIndexValues(a,index,val,heap_size);
+}
 //创建最大堆树
 void buildMaxHeap(int a[],int length)
 {
