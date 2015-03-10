@@ -135,7 +135,7 @@ void buildMaxHeap(int a[],int length)
 -  conquer:递归调用quick sort方法处理A[p,x-1]和A[x+1,r]
 -  combine:由于每次的各个子数组A[p,x-1]和A[x+1,r]都是有序的,因为A[p,x-1] < A[x+1,r],所以当递归处理完后已经是有序队列le,所以不用再处理合并操作
 
-**算法代码实现:**
+**算法代码实现和过程展示图**
 ```
 int partition(int a[],int p,int r)
 {
@@ -165,6 +165,8 @@ void quick_sort(int a[],int p,int r)
   }
 }
 ```
+
+![快排演示图](http://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Partition_example.svg/200px-Partition_example.svg.png)
 **算法时间复杂度:**
 - 最优复杂度为n*logn
 - 最差复杂度和插入排序一样为n*n
