@@ -1,5 +1,6 @@
 # 算法与数据结构
 
+****
 * 基本排序
   * [heap sort 堆排序](#heap_sort) 
   * [qucik sort 快速排序](#qucik_sort) 
@@ -18,7 +19,10 @@
 
 ```
 parent(i)
-  return i/2;
+  return 
+  
+  
+****i/2;
 
 left(i)
   return 2*i;
@@ -131,6 +135,7 @@ void buildMaxHeap(int a[],int length)
 -  conquer:递归调用quick sort方法处理A[p,x-1]和A[x+1,r]
 -  combine:由于每次的各个子数组A[p,x-1]和A[x+1,r]都是有序的,因为A[p,x-1] < A[x+1,r],所以当递归处理完后已经是有序队列le,所以不用再处理合并操作
 
+**算法代码实现:**
 ```
 int partition(int a[],int p,int r)
 {
@@ -149,6 +154,7 @@ int partition(int a[],int p,int r)
   return (i + 1)
 }
 
+****
 void quick_sort(int a[],int p,int r)
 {
   if(p < r)
@@ -159,6 +165,11 @@ void quick_sort(int a[],int p,int r)
   }
 }
 ```
+**算法时间复杂度:**
+- 最优复杂度为n*logn
+- 最差复杂度和插入排序一样为n*n
+- 平均复杂度为n*logn
+
 ## <a name="insert_sort">插入排序</a> [&#8593;](#insert_sort)
 ## <a name="merge_sort">合并排序</a> [&#8593;](#merge_sort)
 ## <a name="radix_sort">基数排序</a> [&#8593;](#radix_sort)
