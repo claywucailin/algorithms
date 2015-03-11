@@ -11,7 +11,7 @@
 
 
 ## <a name="heap_sort">堆排序</a> [&#8593;](#heap_sort)
-**描述:** 堆排序是基于比较的的排序算法。堆排序可以看作是改良的选择排序,它采用堆数据结构,每次从待排序的序列中选出最大或者最小的元素。
+**描述:** 堆排序是基于比较的排序算法。堆排序可以看作是改良的选择排序,它采用堆数据结构,每次从待排序的序列中选出最大或者最小的元素。
 
 (二叉)堆数据结构本质上是建立在一个数组对象上的,可以把它看作是完全二叉树,如下图所示。树上的每一个节点对应于数组上的一个元素。该数组A有2个属性,数组长度A.length和堆长度A.heap-size,其中A.length>=A.heap_size。堆的第一个元素存储在数组下标为1的位置上A[1],堆的存储下标范围是1...heap-size。
 
@@ -174,6 +174,44 @@ void quick_sort(int a[],int p,int r)
 - 平均复杂度:n*logn
 
 ## <a name="insert_sort">插入排序</a> [&#8593;](#insert_sort)
+**描述:**插入排序是基于比较的排序算法,在有序的队列中插入元素依次比较找到插入位置。有2种实现方案,这里给出递归和非递归:
+```
+void insert_sort(int *a,int l, int r)
+{
+  for(i = l + 1; i < r; i++)
+  {
+    tmp = a[i];
+    for(j = i - 1; j >= i; j--)
+    {
+      if(tmp > a[j])
+        a[j+1] = a[j]
+    }
+    a[j+1] = tmp;
+  }
+}
+
+void insert_sort_incrusive(int *a,int l, int r)
+{
+  if(l < r)
+  {
+    insert_sort_incrusive(a, l, r - 1);
+  }
+  tmp = a[r];
+  for(j = r - 1; j >= l; j--)
+  {
+    if(tmp > a[j])
+      a[j+1] = a[j];
+  }
+  a[j+1] = tmp;
+}
+```
+![插入排序演示图](http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
+
+**时间复杂度:**
+- 最优复杂度:当序列是有序的,其时间复杂度为最优,为O(n)
+- 最差复杂度:当序列是逆序的,其时间复杂度为O(n*n)
+- 平均复杂度:平均复杂度为O(n*n)
+
 ## <a name="merge_sort">合并排序</a> [&#8593;](#merge_sort)
 ## <a name="radix_sort">基数排序</a> [&#8593;](#radix_sort)
 ## <a name="count_sort">计数排序</a> [&#8593;](#count_sort)
